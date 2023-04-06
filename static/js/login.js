@@ -4,6 +4,7 @@ document.querySelector("[data-work = register]").addEventListener('click', async
         email: document.querySelector("[data-work = username]").value,
         password: document.querySelector("[data-work = password]").value
     });
+    console.log(body);
     const resp = await fetch("/register", {
         method: "POST",
         body: body,
