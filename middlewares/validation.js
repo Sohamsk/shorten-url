@@ -5,7 +5,6 @@ async function validateInput(req, res, next) {
   let email = req.body.email;
 
   if (email.length == 0 || !regmail.test(email)) {
-    console.log("Request failed");
     res.send(JSON.stringify({ status: "failure", code: 02 }));
   } else next();
 }
