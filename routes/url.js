@@ -4,7 +4,7 @@ const { generateID, displayPage } = require("../controllers/url");
 const router = express.Router();
 router.use(express.json());
 
-router.post("/", generateID);
+router.post("/generate", generateID);
 router.get("/:id", displayPage);
 
 module.exports = router;

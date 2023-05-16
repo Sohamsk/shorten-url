@@ -7,10 +7,11 @@ function generateID(req, res) {
     res.send(JSON.stringify({ status: "failed", code: 02 }));
     return;
   }
+
   const eid = nanoid(8);
   ledger.create({
     entryId: eid,
-    userId: getUser(req.body.id),
+    userId: getUser(req.cookies.uuid),
     url: req.body.url,
   });
   res.send(JSON.stringify({ status: "sucess", code: 01, id: eid }));

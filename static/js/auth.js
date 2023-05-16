@@ -35,6 +35,6 @@ document
       },
     });
     let js = await resp.json();
-    if (js.code == 02) console.error(js.status);
+    if (js.code === 01) location.replace("/generate");
     else console.log(js.status);
   });

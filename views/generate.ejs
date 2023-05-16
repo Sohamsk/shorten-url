@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Generate URL</title>
+	<link rel="stylesheet" href="css/generate.css">
+</head>
+<body>
+	<div class="header">
+		Create Short URL
+	</div>
+	<div>
+	</div>
+	<div class="form">
+		<div class="form-element">
+			<label for="longurl">Enter link</label>
+			<input type="text" id="longurl" placeholder="http://site.com">
+		</div>
+		<div class="form-element">
+			<button id="create-short-url">Create Short URL</button>
+		</div>
+		<div class="result">
+			<a href="#" id="short-url" target="_blank"></a>
+		</div>
+	</div>
+	<div class="list">
+		<h2>Shorten links</h2>
+		<table>
+			<thead>
+				<th>S. No</th>
+				<th>ShortID</th>
+				<th>Redirect</th>
+				<th>Clicks</th>
+			</thead>
+			<tbody>
+					<% if (locals.urls) { %>
+					<% urls.forEach((url, index)=> { %>
+						<tr>
+							<td>
+								<%= index + 1 %>
+							</td>
+							<td>
+								<%= url.entryId %>
+							</td>
+							<td>
+								<%= url.url %>
+							</td>
+							<td>
+								<%= url.clicks %>
+							</td>
+						</tr>
+						<% }) %>
+				</tbody>
+			</table>
+			<% } %>
+	</div>
+<script src="js/page.js"></script>
+</body>
+</html>
