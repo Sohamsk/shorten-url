@@ -1,4 +1,4 @@
-const sessionIdMap = new map();
+const sessionIdMap = new Map();
 
 function setUser(id, user) {
   sessionIdMap.set(id, user);

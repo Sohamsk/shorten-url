@@ -8,6 +8,7 @@ const userLogin = db.define(
       type: DataTypes.STRING,
       primaryKey: true,
       allowNull: false,
+      unique: true,
     },
     pword: {
       type: DataTypes.STRING,

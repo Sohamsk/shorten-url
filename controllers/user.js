@@ -1,8 +1,10 @@
+const { v4: uuid } = require("uuidv4");
 const { userLogin } = require("../models/userlogin");
+const { setUser } = require("../services/auth");
 
 async function handleRegister(req, res) {
   try {
-    const reg = await userLogin.create({
+    userLogin.create({
       id: req.body.email,
       pword: req.body.password,
     });
@@ -20,6 +22,9 @@ async function handleLogin(req, res) {
   });
 
   if (resp) {
+    const id = uuid.v4();
+    setUser(id, req.body.email);
+
     res.send(JSON.stringify({ status: "login Successfull", code: 01 }));
   } else res.send(JSON.stringify({ status: "login failed", code: 02 }));
 }
