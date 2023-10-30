@@ -14,7 +14,7 @@ router.get("/generate", checkLogin, async (req, res) => {
   const user = getUser(req.cookies.uuid);
   const allUrls = await ledger.findAll({
     where: {
-      userId: user,
+      userid: user,
     },
   });
   res.render("generate", { urls: allUrls });

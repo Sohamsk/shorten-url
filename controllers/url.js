@@ -5,17 +5,17 @@ const path = require("path");
 
 function generateID(req, res) {
   if (!req.body.url) {
-    res.send(JSON.stringify({ status: "failed", code: 02 }));
+    res.send(JSON.stringify({ status: "failed", code: 2 }));
     return;
   }
 
   const eid = nanoid(8);
   ledger.create({
-    entryId: eid,
-    userId: getUser(req.cookies.uuid),
+    entryid: eid,
+    userid: getUser(req.cookies.uuid),
     url: req.body.url,
   });
-  res.send(JSON.stringify({ status: "sucess", code: 01, id: eid }));
+  res.send(JSON.stringify({ status: "sucess", code: 1, id: eid }));
 }
 
 async function displayPage(req, res) {

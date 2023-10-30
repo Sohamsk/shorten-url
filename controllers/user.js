@@ -9,11 +9,11 @@ async function handleRegister(req, res) {
       pword: req.body.password,
     })
     .then(() => {
-      res.send(JSON.stringify({ status: "sucess", code: 01 }));
+      res.send(JSON.stringify({ status: "sucess", code: 1 }));
     })
     .catch((error) => {
       if (error.name === "SequelizeUniqueConstraintError") {
-        res.send(JSON.stringify({ status: "failure", code: 03 }));
+        res.send(JSON.stringify({ status: "failure", code: 3 }));
       }
     });
 }
@@ -30,10 +30,10 @@ async function handleLogin(req, res) {
       setUser(id, req.body.email);
       res.cookie("uuid", id);
     }
-    res.send(JSON.stringify({ code: 01 }));
+    res.send(JSON.stringify({ code: 1 }));
   } else {
     res.status(401);
-    res.send(JSON.stringify({ status: "login failed", code: 02 }));
+    res.send(JSON.stringify({ status: "login failed", code: 2 }));
   }
 }
 

@@ -15,7 +15,7 @@ document
 
     let obj = await resp.json();
 
-    const short = "http://localhost:3000/url/" + obj.id;
+    const short = "http://192.168.126.75:3000/url/" + obj.id;
 
     let url = document.querySelector("#short-url");
     url.textContent = short;

@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html>
+
 <head>
 	<title>Generate URL</title>
 	<link rel="stylesheet" href="css/generate.css">
 </head>
+
 <body>
 	<div class="header">
 		Create Short URL
@@ -32,14 +34,14 @@
 				<th>Clicks</th>
 			</thead>
 			<tbody>
-					<% if (locals.urls) { %>
+				<% if (locals.urls) { %>
 					<% urls.forEach((url, index)=> { %>
 						<tr>
 							<td>
 								<%= index + 1 %>
 							</td>
 							<td>
-								<%= url.entryId %>
+								<%= url.entryid %>
 							</td>
 							<td>
 								<%= url.url %>
@@ -49,10 +51,11 @@
 							</td>
 						</tr>
 						<% }) %>
-				</tbody>
-			</table>
-			<% } %>
+			</tbody>
+		</table>
+		<% } %>
 	</div>
-<script src="js/page.js"></script>
+	<script src="js/page.js"></script>
 </body>
+
 </html>

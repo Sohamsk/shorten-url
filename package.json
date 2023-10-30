@@ -14,13 +14,14 @@
     "cookie-parser": "^1.4.6",
     "ejs": "^3.1.9",
     "express": "^4.18.2",
-    "mysql2": "^3.3.0",
     "nanoid": "^3.3.6",
     "path": "^0.12.7",
+    "pg": "^8.11.3",
+    "pg-hstore": "^2.3.4",
     "sequelize": "^6.31.1",
     "uuidv4": "^6.2.13"
   },
   "devDependencies": {
-    "nodemon": "^2.0.22"
+    "nodemon": "^3.0.1"
   }
 }

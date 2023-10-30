@@ -4,13 +4,13 @@ const db = require("./connect");
 const ledger = db.define(
   "ledger",
   {
-    entryId: {
+    entryid: {
       type: DataTypes.STRING(8),
       primaryKey: true,
       allowNull: false,
       unique: true,
     },
-    userId: {
+    userid: {
       type: DataTypes.STRING,
       allowNull: false,
     },
