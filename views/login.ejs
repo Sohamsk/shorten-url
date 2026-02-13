@@ -1,33 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <link rel="stylesheet" href="css/index.css">
-  <title>Login Page</title>
-</head>
-<body>
+  <head>
+    <link rel="stylesheet" href="css/index.css" />
+    <title>Login Page</title>
+  </head>
+  <body>
     <section>
-        <div class="form-box">
-            <div class="form-value">
-                <form action="">
-                    <h2>Login</h2>
-                    <div class="inputbox">
-                        <ion-icon name="mail-outline"></ion-icon>
-                        <input data-work="username" type="email" required>
-                        <label for="">Email</label>
-                    </div>
-                    <div class="inputbox">
-                        <ion-icon name="lock-closed-outline"></ion-icon>
-                        <input data-work="password" type="password" required>
-                        <label for="">Password</label>
-                    </div>
-                    <input class="btn" type="submit" data-work="register" value="Register"><br><br>
-                    <input class="btn" type="submit" data-work="login" value="Login">
-                </form>
+      <div class="form-box">
+        <div class="form-value">
+          <form action="">
+            <h2>Login</h2>
+            <div class="inputbox">
+              <ion-icon name="mail-outline"></ion-icon>
+              <input data-work="username" type="email" required />
+              <label for="">Mail ID</label>
             </div>
+            <div class="inputbox">
+              <ion-icon name="lock-closed-outline"></ion-icon>
+              <input data-work="password" type="password" required />
+              <label for="">PWD</label>
+            </div>
+            <input
+              class="btn"
+              type="submit"
+              data-work="register"
+              value="Register"
+            /><br /><br />
+            <input class="btn" type="submit" data-work="login" value="Login" />
+          </form>
         </div>
+      </div>
     </section>
-    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
     <script src="js/auth.js"></script>
-</body>
+  </body>
 </html>
